@@ -1,0 +1,29 @@
+/* frontend/src/App.css */
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.file-list {
+  margin-top: 20px;
+}
+
+.file-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.file-list th, .file-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.file-list th {
+  background-color: #f2f2f2;
+}
+
+.loading img {
+  width: 50px;
+}

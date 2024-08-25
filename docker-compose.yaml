@@ -1,0 +1,29 @@
+# docker-compose.yml
+
+version: '3'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5000:5000"
+
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: app_test_db
+      POSTGRES_USER: intheair_user
+      POSTGRES_PASSWORD: intheair
+    ports:
+      - "5432:5432"
